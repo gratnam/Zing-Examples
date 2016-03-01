@@ -1,0 +1,258 @@
+<html>
+<head>
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <script>
+    zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", 
+    "ee6b7db5b51705a13dc2339db3edaf6d"];
+  </script>
+  <script src='http://cdn.zingchart.com/modules/zingchart-patterns.min.js'></script>
+
+  <style>
+    #myChart {
+    margin-top: 40px;
+    margin-left: 100px;
+    margin-bottom: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id='myChart'></div>
+  <script>
+    zingchart.THEME = "classic";
+    var myConfig = {
+      "graphset": [{
+        "type": "bubble",
+        "background-color": "#f4f4f4",
+        "title": {
+          "text": "Most Popular Girl Scout Cookies",
+          "background-color": "#fefefe",
+          "y": "0%",
+          "font-color": "#000000",
+          "font-size": "30px",
+          "font-weight": "bold",
+        },
+        "plot": {
+          "scaling": "radius",
+          "size-factor": 2.4,
+          "selection-mode": "multiple",
+          "cursor": "hand"
+        },
+        "scale-x": {
+          "line-width": "4px",
+          "line-color": "#141414",
+          "alpha": "0.25",
+          "item": {
+            "font-weight": "normal",
+            "rules": [{
+              "rule": "%v == 0",
+              "text": "Lowest Volume"
+            }, {
+              "rule": "%v >= 1",
+              "text": ""
+            }, {
+              "rule": "%v == 10",
+              "text": "Highest Volume"
+            }]
+          },
+          "tick": {
+            "visible": false
+          },
+          "guide": {
+            "visible": false
+          }
+        },
+        "scale-y": {
+          "visible": false,
+          "values": "0:1:2",
+          "guide": {
+            "visible": false
+          }
+        },
+        "series": [{
+          "values": [
+            [
+              .2,
+              2,
+              23
+            ]
+          ],
+          "marker": {
+            "background-color": "#FFD700",
+            "alpha": "1"
+          },
+          "selected-marker": {
+            "background-color": "#222222",
+            "alpha": 0.25
+          },
+
+          "value-box": {
+            "text": "<b>Lemon Chalet Cremes,<br> Shout Outs,<br> Thank U Berry Munch</b><br>23%",
+            "placement": "bottom",
+            "font-color": "#141414",
+            "font-weight": "normal",
+            "font-family": "Tahoma"
+          },
+          "tooltip": {
+            "text": "23%",
+            "background-color": "#000000",
+            "shadow": false
+          }
+        }, {
+          "values": [
+            [
+              1.5,
+              2,
+              9
+            ]
+          ],
+          "marker": {
+            "background-color": "#F0E68C",
+            "background-repeat": "no-repeat",
+          "size": 12
+          },
+          "selected-marker": {
+            "background-color": "#333333",
+            "alpha": 0.25
+          },
+          "value-box": {
+            "text": "<b>Shortbread & <br>Trefoils</b><br>9%",
+            "placement": "bottom",
+            "font-color": "#141414",
+            "font-weight": "normal",
+            "font-family": "Tahoma"
+          },
+          "tooltip": {
+            "text": "9%",
+            "background-color": "#000000",
+            "shadow": false
+          }
+        }, {
+          "values": [
+            [
+              3,
+              2,
+              11
+            ]
+          ],
+          "marker": {
+            "background-color": "#CD853F",
+            "alpha": "1"
+          },
+          "selected-marker": {
+            "background-color": "#555555",
+            "alpha": 0.25
+          },
+          "value-box": {
+            "text": "<b>Peanut Butter Sandwich &<br>Do-si-dos</b><br>11%",
+            "placement": "bottom",
+            "font-color": "#141414",
+            "font-weight": "normal",
+            "font-family": "Tahoma"
+          },
+          "tooltip": {
+            "text": "11%",
+            "background-color": "#000000",
+            "shadow": false
+          }
+        }, {
+          "values": [
+            [
+              4.5,
+              2,
+              13
+            ]
+          ],
+          "marker": {
+            "background-image": "PATTERN_SMALL_GRID",
+            "background-color": "#CD853F",
+            "alpha": "1"
+          },
+          "selected-marker": {
+            "background-color": "#555555",
+            "alpha": 0.25
+          },
+          "value-box": {
+            "text": "<b>Peanut Butter Patties &<br> Tagalongs</b><br>13%",
+            "placement": "bottom",
+            "font-color": "#141414",
+            "font-weight": "normal",
+            "font-family": "Tahoma"
+          },
+          "tooltip": {
+            "text": "13%",
+            "background-color": "#000000",
+            "shadow": false
+          }
+        }, {
+          "values": [
+            [
+              6,
+              2,
+              19
+            ]
+          ],
+          "marker": {
+            "background-image": "PATTERN_ZIGZAG",
+            "background-color": "#8B4513",
+            "alpha": "0.75"
+          },
+          "selected-marker": {
+            "background-color": "#999999",
+            "alpha": 0.25
+          },
+          "value-box": {
+            "text": "<b>Samoas &<br>Caramel deLites</b><br>19%",
+            "placement": "bottom",
+            "font-color": "#141414",
+            "font-weight": "normal",
+            "font-family": "Tahoma"
+          },
+          "tooltip": {
+            "text": "19%",
+            "background-color": "#000000",
+            "shadow": false
+          }
+        }, {
+          "values": [
+            [
+              7.5,
+              2,
+              25
+            ]
+          ],
+          "marker": {
+            "background-image": "PATTERN_LARGE_CHECKER_BOARD",
+            "background-color": "#800000",
+            "alpha": "0.75"
+          },
+          "selected-marker": {
+            "background-color": "#EEEEEE",
+            "alpha": 0.25
+          },
+          "value-box": {
+            "text": "<b>Thin Mints</b><br>25%",
+            "placement": "bottom",
+            "font-color": "#141414",
+            "font-weight": "normal",
+            "font-family": "Tahoma"
+          },
+          "tooltip": {
+            "text": "25%",
+            "background-color": "#000000",
+            "shadow": false
+          }
+        }]
+      }]
+    };
+
+    zingchart.render({
+      id: 'myChart',
+      data: myConfig,
+      height: 400,
+      width: 1000
+    });
+  </script>
+</body>
+</html>
